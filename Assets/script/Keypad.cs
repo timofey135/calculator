@@ -77,9 +77,6 @@ public class Keypad : PanelManager
             storedValues[_currentIndex] += digit;
         }
 
-
-        //currentInput = storedValues[_currentIndex];
-        //UpdateDisplay();
     }
 
     private void UpdateDisplay()

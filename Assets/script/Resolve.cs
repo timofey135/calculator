@@ -7,14 +7,14 @@ public class Resolve : PanelManager
     [SerializeField] private TextMeshProUGUI _testTxt;
 
     [Header("Физические константы")]
-    private PhysicsConstants constants;
+    private PhysicsConstants _constants;
 
     public void OnButtonClick(int id)
     {
-        float G = constants != null ? constants.gravitationalConstant : 6.674e-11f;
-        float c = constants != null ? constants.speedOfLight : 299792458f;
-        float h = constants != null ? constants.planckConstant : 6.626e-34f;
-        float e = constants != null ? constants.elementaryCharge : 1.602e-19f;
+        float G = _constants != null ? _constants.GravitationalConstant : 6.674e-11f;
+        float c = _constants != null ? _constants.SpeedOfLight : 299792458f;
+        float h = _constants != null ? _constants.PlanckConstant : 6.626e-34f;
+        float e = _constants != null ? _constants.ElementaryCharge : 1.602e-19f;
 
         float.TryParse(m1Txt.text, out float val_m1);
         float.TryParse(m2Txt.text, out float val_m2);
